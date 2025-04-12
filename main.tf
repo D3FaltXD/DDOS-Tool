@@ -1,5 +1,5 @@
 resource "aws_instance" "attacker" {
-  count         = 10
+  count         = 8
   ami           = "ami-002f6e91abff6eb96" # Ubuntu AMI
   instance_type = "t3.micro"
 
