@@ -31,6 +31,7 @@ resource "aws_instance" "attacker" {
   count         = min(var.number_of_nodes, 8) # Limit to a maximum of 8 instances
   ami           = "ami-002f6e91abff6eb96"     # Ubuntu AMI (Consider making this a variable)
   instance_type = "t3.micro"
+  monitoring    = true    
 
   user_data = <<-EOF
              #!/bin/bash
